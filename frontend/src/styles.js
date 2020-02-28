@@ -29,15 +29,33 @@ export const Calculator = styled.div`
     padding: 10px;
 `;
 
-export const Display = styled.section``;
+export const Display = styled.div`
+    display: grid;
+    background: orange;
+    height: 100px;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+`;
 
-export const Keyboard = styled.div``;
+export const Text = styled.text`
+    justify-self: right;
+    margin-top: 30px;
+    font-size: 60px;
+    margin-right: 10px;
+    font-family: 'Arial', sans-serif;  
+`;
+
+export const Keyboard = styled.div`
+`;
 
 export const MainKeys = styled.section``;
 
 export const Line = styled.div``;
 
 export const Key = styled.button``;
+
+export const Number = styled.text``;
 
 export const OperationKeys = styled.aside``;
 
