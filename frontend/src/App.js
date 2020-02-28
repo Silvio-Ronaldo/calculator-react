@@ -1,9 +1,47 @@
 import React from 'react';
-import './App.css';
+import { Calculator, Display, Keyboard, MainKeys, Line, Key, OperationKeys } from './styles';
 
 function App() {
   return (
-    <h1>Hello World!</h1>
+    <>
+      <Calculator>
+        <Display>
+
+        </Display>
+        <Keyboard >
+          <MainKeys>
+            <Line>
+              <Key></Key>
+              <Key></Key>
+              <Key></Key>
+            </Line>
+            <Line>
+              <Key></Key>
+              <Key></Key>
+              <Key></Key>
+            </Line>
+            <Line>
+              <Key></Key>
+              <Key></Key>
+              <Key></Key>
+            </Line>
+            <Line>
+              <Key></Key>
+              <Key></Key>
+              <Key></Key>
+            </Line>  
+          </MainKeys>
+
+          <OperationKeys>
+              <Key></Key>
+              <Key></Key>
+              <Key></Key>
+              <Key></Key>
+              <Key></Key>
+          </OperationKeys>
+        </Keyboard>
+      </Calculator>
+    </>
   );
 }
 

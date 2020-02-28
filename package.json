@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "create-react-app": "^3.4.0"
+    "create-react-app": "^3.4.0",
+    "styled-components": "^5.0.1"
   }
 }
