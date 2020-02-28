@@ -43,19 +43,48 @@ export const Text = styled.text`
     margin-top: 30px;
     font-size: 60px;
     margin-right: 10px;
-    font-family: 'Arial', sans-serif;  
+    font-family: 'Verdana', sans-serif;  
 `;
 
 export const Keyboard = styled.div`
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 370px;
+    background: pink;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
 `;
 
-export const MainKeys = styled.section``;
+export const MainKeys = styled.section`
+    display: grid;
+    grid-template-columns: 1fr;
+    background: brown;
+    border-radius: 10px;
+    padding: 10px;
+`;
 
-export const Line = styled.div``;
+export const Line = styled.div`
+    justify-self: center;
+    padding: 5px;
+`;
 
-export const Key = styled.button``;
+export const Key = styled.button`
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    margin-left: 17px;
+    margin-bottom: 5px;
+    background: #999;
+    cursor: pointer;
+`;
 
-export const Number = styled.text``;
+export const Number = styled.text`
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Verdana';
+`;
 
 export const OperationKeys = styled.aside``;
 
