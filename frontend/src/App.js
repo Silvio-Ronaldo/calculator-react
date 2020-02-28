@@ -1,46 +1,50 @@
 import React from 'react';
-import { Calculator, Display, Keyboard, MainKeys, Line, Key, OperationKeys } from './styles';
+import { Container, Title, Calculator, Display, Keyboard, MainKeys, Line, Key, OperationKeys } from './styles';
 
 function App() {
   return (
     <>
-      <Calculator>
-        <Display>
+      <Container>
+        <Title>CALCULATOR</Title>
 
-        </Display>
-        <Keyboard >
-          <MainKeys>
-            <Line>
-              <Key></Key>
-              <Key></Key>
-              <Key></Key>
-            </Line>
-            <Line>
-              <Key></Key>
-              <Key></Key>
-              <Key></Key>
-            </Line>
-            <Line>
-              <Key></Key>
-              <Key></Key>
-              <Key></Key>
-            </Line>
-            <Line>
-              <Key></Key>
-              <Key></Key>
-              <Key></Key>
-            </Line>  
-          </MainKeys>
+        <Calculator>
+          <Display>
 
-          <OperationKeys>
-              <Key></Key>
-              <Key></Key>
-              <Key></Key>
-              <Key></Key>
-              <Key></Key>
-          </OperationKeys>
-        </Keyboard>
-      </Calculator>
+          </Display>
+          <Keyboard >
+            <MainKeys>
+              <Line>
+                <Key></Key>
+                <Key></Key>
+                <Key></Key>
+              </Line>
+              <Line>
+                <Key></Key>
+                <Key></Key>
+                <Key></Key>
+              </Line>
+              <Line>
+                <Key></Key>
+                <Key></Key>
+                <Key></Key>
+              </Line>
+              <Line>
+                <Key></Key>
+                <Key></Key>
+                <Key></Key>
+              </Line>  
+            </MainKeys>
+
+            <OperationKeys>
+                <Key></Key>
+                <Key></Key>
+                <Key></Key>
+                <Key></Key>
+                <Key></Key>
+            </OperationKeys>
+          </Keyboard>
+        </Calculator>
+      </Container>
     </>
   );
 }
