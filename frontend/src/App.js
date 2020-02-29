@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Title, Calculator, Display, Text, Keyboard, MainKeys, Line, Key, Number, OperationKeys } from './styles';
+import { Container, Title, Calculator, Display, Signal, Text, Keyboard, MainKeys, Line, Key, Number, OperationKeys, SignalKey } from './styles';
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
 
         <Calculator>
           <Display>
+            <Signal>+</Signal>
             <Text>700</Text>
           </Display>
           <Keyboard >
@@ -36,11 +37,11 @@ function App() {
             </MainKeys>
 
             <OperationKeys>
-                <Key><Number>/</Number></Key>
-                <Key><Number>*</Number></Key>
-                <Key><Number>-</Number></Key>
-                <Key><Number>+</Number></Key>
-                <Key><Number>=</Number></Key>
+                <SignalKey><Number>/</Number></SignalKey>
+                <SignalKey><Number>*</Number></SignalKey>
+                <SignalKey><Number>-</Number></SignalKey>
+                <SignalKey><Number>+</Number></SignalKey>
+                <SignalKey><Number>=</Number></SignalKey>
             </OperationKeys>
           </Keyboard>
         </Calculator>

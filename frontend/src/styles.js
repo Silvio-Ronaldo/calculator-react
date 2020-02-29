@@ -38,9 +38,17 @@ export const Display = styled.div`
     color: white;
 `;
 
+export const Signal = styled.text`
+    justify-self: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    visibility: none;
+`;
+
 export const Text = styled.text`
     justify-self: right;
-    margin-top: 30px;
     font-size: 60px;
     margin-right: 10px;
     font-family: 'Verdana', sans-serif;  
@@ -87,6 +95,10 @@ export const Number = styled.text`
 `;
 
 export const OperationKeys = styled.aside``;
+
+export const SignalKey = styled(Key)`
+    background: teal;
+`;
 
 
 
