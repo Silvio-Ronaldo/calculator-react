@@ -31,6 +31,8 @@ export const Calculator = styled.div`
 
 export const Display = styled.div`
     display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr;
     background: orange;
     height: 100px;
     border-radius: 10px;
@@ -38,7 +40,20 @@ export const Display = styled.div`
     color: white;
 `;
 
+export const Result = styled.text`
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    padding: 0px;
+    font-size: 30px;
+    font-family: 'Verdana', sans-serif;
+`;
+
 export const Signal = styled.text`
+    grid-row-start: 1;
+    grid-row-end: 2;
     justify-self: right;
     margin-top: 5px;
     margin-right: 10px;
@@ -48,6 +63,10 @@ export const Signal = styled.text`
 `;
 
 export const Text = styled.text`
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
     justify-self: right;
     font-size: 60px;
     margin-right: 10px;
