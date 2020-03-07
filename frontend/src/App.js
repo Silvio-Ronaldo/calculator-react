@@ -30,6 +30,7 @@ function App() {
       setTotal((parseInt(valueDisplay)));
       setFromOperation(true);
     }
+    setCountNumbers(0);
   }
 
   return (
