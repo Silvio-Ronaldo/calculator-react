@@ -41,6 +41,7 @@ export const Display = styled.div`
 `;
 
 export const Result = styled.text`
+    visibility: ${props => props.visible ? "none" : "hidden" };
     grid-row-start: 1;
     grid-row-end: 2;
     justify-self: right;
@@ -52,6 +53,7 @@ export const Result = styled.text`
 `;
 
 export const Signal = styled.text`
+    visibility: ${props => props.visible ? "none" : "hidden"};
     grid-row-start: 1;
     grid-row-end: 2;
     justify-self: right;

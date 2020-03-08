@@ -6,8 +6,13 @@ function App() {
   const [countNumbers, setCountNumbers] = useState(0);
   const [total, setTotal] = useState(0);
   const [fromOperation, setFromOperation] = useState(false);
+  const [signal, setSignal] = useState('');
+  const [visibleTotal, setVisibleTotal] = useState(false);
+  const [visibleSignal, setVisibleSignal] = useState(false);
 
   function handleNumbers(i) {
+    setVisibleTotal(true);
+
     if(countNumbers < 10) {
       if(fromOperation) {
         setValueDisplay(i);
@@ -23,27 +28,51 @@ function App() {
   }
 
   function handleOperations(operation) {
+
     if((valueDisplay !== '') && (total !== 0)) {
       switch(operation) {
         case 1:
           setTotal(total + (parseInt(valueDisplay)));
+          setSignal('+');
           break;
         case 2:
           setTotal(total - (parseInt(valueDisplay)));
+          setSignal('-');
           break;
         case 3:
           setTotal(total * (parseInt(valueDisplay)));
+          setSignal('*');
           break;
         case 4:
           setTotal(total / (parseInt(valueDisplay)));
+          setSignal('/');
           break;
       }
       setFromOperation(true);
     } else if(valueDisplay !== '') {
+      
+      if(operation === 1) {
+        setSignal('+');
+      } else if(operation === 2) {
+        setSignal('-');
+      } else if(operation === 3) {
+        setSignal('*');
+      } else {
+        setSignal('/');
+      }
+
       setTotal((parseInt(valueDisplay)));
       setFromOperation(true);
     }
     setCountNumbers(0);
+    setVisibleSignal(true);
+    setVisibleTotal(true);
+  }
+
+  function handleResult() {
+    setValueDisplay(total);
+    setVisibleTotal(false);
+    setVisibleSignal(false);
   }
 
   return (
@@ -53,8 +82,8 @@ function App() {
 
         <Calculator>
           <Display>
-            <Result>{total}</Result>
-            <Signal>+</Signal>
+            <Result visible={visibleTotal}>{total}</Result>
+            <Signal visible={visibleSignal}>{signal}</Signal>
             <Text>{valueDisplay}</Text>
           </Display>
           <Keyboard>
@@ -86,7 +115,7 @@ function App() {
                 <SignalKey onClick={ () => handleOperations(3) }><Number>*</Number></SignalKey>
                 <SignalKey onClick={ () => handleOperations(2) }><Number>-</Number></SignalKey>
                 <SignalKey onClick={ () => handleOperations(1) }><Number>+</Number></SignalKey>
-                <SignalKey><Number>=</Number></SignalKey>
+                <SignalKey onClick={ () => handleResult() }><Number>=</Number></SignalKey>
             </OperationKeys>
           </Keyboard>
         </Calculator>
