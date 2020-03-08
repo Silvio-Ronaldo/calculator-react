@@ -9,6 +9,8 @@ function App() {
   const [signal, setSignal] = useState('');
   const [visibleTotal, setVisibleTotal] = useState(false);
   const [visibleSignal, setVisibleSignal] = useState(false);
+  const [visibleTextDisplay, setVisibleTextDisplay] = useState(true);
+  const [prevSignal, setPrevSignal] = useState(0);
 
   function handleNumbers(i) {
     setVisibleTotal(true);
@@ -24,31 +26,37 @@ function App() {
     } else {
       return;
     }
-
   }
 
   function handleOperations(operation) {
 
     if((valueDisplay !== '') && (total !== 0)) {
-      switch(operation) {
+      switch(prevSignal) {
         case 1:
           setTotal(total + (parseInt(valueDisplay)));
-          setSignal('+');
           break;
         case 2:
           setTotal(total - (parseInt(valueDisplay)));
-          setSignal('-');
           break;
         case 3:
           setTotal(total * (parseInt(valueDisplay)));
-          setSignal('*');
           break;
         case 4:
           setTotal(total / (parseInt(valueDisplay)));
-          setSignal('/');
           break;
       }
+
+      if(operation === 1) {
+        setSignal('+');
+      } else if(operation === 2) {
+        setSignal('-');
+      } else if(operation === 3) {
+        setSignal('*');
+      } else {
+        setSignal('/');
+      }
       setFromOperation(true);
+      
     } else if(valueDisplay !== '') {
       
       if(operation === 1) {
@@ -67,12 +75,24 @@ function App() {
     setCountNumbers(0);
     setVisibleSignal(true);
     setVisibleTotal(true);
+    setPrevSignal(operation);
   }
 
   function handleResult() {
-    setValueDisplay(total);
-    setVisibleTotal(false);
+    setValueDisplay(() => {
+      switch(prevSignal) {
+        case 1: 
+          return (total + valueDisplay);
+        case 2: 
+          return (total - valueDisplay);
+        case 3:
+          return (total * valueDisplay);
+        case 4:
+          return (total / valueDisplay);
+      }
+    })
     setVisibleSignal(false);
+    setVisibleTotal(false);
   }
 
   return (
