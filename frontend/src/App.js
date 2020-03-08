@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Container, Title, Calculator, Display, Result, Signal, Text, Keyboard, MainKeys, Line, Key, Number, OperationKeys, SignalKey } from './styles';
 
 function App() {
@@ -24,7 +24,20 @@ function App() {
 
   function handleOperations(operation) {
     if((valueDisplay !== '') && (total !== 0)) {
-      setTotal((parseInt(valueDisplay) + total));
+      switch(operation) {
+        case 1:
+          setTotal(total + (parseInt(valueDisplay)));
+          break;
+        case 2:
+          setTotal(total - (parseInt(valueDisplay)));
+          break;
+        case 3:
+          setTotal(total * (parseInt(valueDisplay)));
+          break;
+        case 4:
+          setTotal(total / (parseInt(valueDisplay)));
+          break;
+      }
       setFromOperation(true);
     } else if(valueDisplay !== '') {
       setTotal((parseInt(valueDisplay)));
