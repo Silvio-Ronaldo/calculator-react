@@ -55,6 +55,7 @@ function App() {
         setSignal('/');
       }
       setFromOperation(true);
+      setValueDisplay('');
       
     } else if(valueDisplay !== '') {
       
@@ -94,11 +95,16 @@ function App() {
     setVisibleTotal(false);
   }
 
-  function handleClear() {
+  function handleClearAll() {
     setTotal(0);
     setValueDisplay('');
     setVisibleSignal(false);
     setVisibleTotal(false);
+  }
+
+  function handleClear() {
+    let str = valueDisplay.toString().substr(0, [valueDisplay.length - 1]);
+    setValueDisplay(str);
   }
 
   return (
@@ -131,8 +137,8 @@ function App() {
               </Line>
               <Line>
                 <Key onClick={() => handleNumbers('0') }><Number>0</Number></Key>
-                <Key><Number>.</Number></Key>
                 <Key onClick={() => handleClear()}><Number>C</Number></Key>
+                <Key onClick={() => handleClearAll()}><Number>CA</Number></Key>
               </Line>  
             </MainKeys>
 
