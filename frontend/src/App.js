@@ -100,11 +100,13 @@ function App() {
     setValueDisplay('');
     setVisibleSignal(false);
     setVisibleTotal(false);
+    setCountNumbers(0);
   }
 
   function handleClear() {
     let str = valueDisplay.toString().substr(0, [valueDisplay.length - 1]);
     setValueDisplay(str);
+    setCountNumbers(countNumbers - 1);
   }
 
   return (
