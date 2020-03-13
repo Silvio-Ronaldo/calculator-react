@@ -9,7 +9,6 @@ function App() {
   const [signal, setSignal] = useState('');
   const [visibleTotal, setVisibleTotal] = useState(false);
   const [visibleSignal, setVisibleSignal] = useState(false);
-  const [visibleTextDisplay, setVisibleTextDisplay] = useState(true);
   const [prevSignal, setPrevSignal] = useState(0);
 
   function handleNumbers(i) {
@@ -95,6 +94,13 @@ function App() {
     setVisibleTotal(false);
   }
 
+  function handleClear() {
+    setTotal(0);
+    setValueDisplay('');
+    setVisibleSignal(false);
+    setVisibleTotal(false);
+  }
+
   return (
     <>
       <Container>
@@ -126,7 +132,7 @@ function App() {
               <Line>
                 <Key onClick={() => handleNumbers('0') }><Number>0</Number></Key>
                 <Key><Number>.</Number></Key>
-                <Key><Number>C</Number></Key>
+                <Key onClick={() => handleClear()}><Number>C</Number></Key>
               </Line>  
             </MainKeys>
 
