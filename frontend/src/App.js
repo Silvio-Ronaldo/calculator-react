@@ -11,6 +11,78 @@ function App() {
   const [visibleSignal, setVisibleSignal] = useState(false);
   const [prevSignal, setPrevSignal] = useState(0);
 
+  function handlePress(e) {
+    e.preventDefault();
+    let keyCode = e.key;
+    switch(keyCode) {
+      case "1":
+        handleNumbers('1');
+        break;
+      case "2":
+        handleNumbers('2');
+        break;
+      case "3":
+        handleNumbers('3');
+        break;
+      case "4":
+        handleNumbers('4');
+        break;
+      case "5":
+        handleNumbers('5');
+        break;
+      case "6":
+        handleNumbers('6');
+        break;
+      case "7":
+        handleNumbers('7');
+        break;
+      case "8":
+        handleNumbers('8');
+        break;
+      case "9":
+        handleNumbers('9');
+        break;
+      case "0":
+        handleNumbers('0');
+        break;
+      case "+":
+        handleOperations(1);
+        break;
+      case "-":
+        handleOperations(2);
+        break;
+      case "*":
+        handleOperations(3);
+        break;
+      case "X":
+        handleOperations(3);
+        break;
+      case "x":
+        handleOperations(3);
+        break;
+      case "/":
+        handleOperations(4);
+        break;
+      case "=":
+        handleResult();
+        break;
+      case "C":
+        handleClear();
+        break;
+      case "c":
+        handleClear();
+        break;
+      case "A":
+        handleClearAll();
+        break;
+      case "a":
+        handleClearAll();
+        break;
+      default:
+        return;
+    }
+  }
+
   function handleNumbers(i) {
     setVisibleTotal(true);
 
@@ -82,13 +154,13 @@ function App() {
     setValueDisplay(() => {
       switch(prevSignal) {
         case 1: 
-          return (total + valueDisplay);
+          return (total + parseInt(valueDisplay));
         case 2: 
-          return (total - valueDisplay);
+          return (total - parseInt(valueDisplay));
         case 3:
-          return (total * valueDisplay);
+          return (total * parseInt(valueDisplay));
         case 4:
-          return (total / valueDisplay);
+          return (total / parseInt(valueDisplay));
       }
     })
     setVisibleSignal(false);
@@ -111,7 +183,7 @@ function App() {
 
   return (
     <>
-      <Container>
+      <Container onKeyDown={(e) => handlePress(e)}>
         <Title>CALCULATOR</Title>
 
         <Calculator>
