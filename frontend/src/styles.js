@@ -121,5 +121,39 @@ export const SignalKey = styled(Key)`
     background: teal;
 `;
 
+export const ListKeys = styled.ul` 
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    width: 350px;
+    justify-self: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px grey;
+`;
+
+export const ListTitle = styled(Title)`
+    grid-column-start: 1;
+    grid-column-end: 2;
+    color: black;
+    font-size: 20px;
+`;
+
+export const Items = styled.li`
+    list-style: none;
+    font-size: 20px;
+    font-family: 'Verdana', sans-serif;
+    
+`;
+
+export const Icon = styled.div`
+    display: inline;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+    background: gray;
+    padding: 5px;
+`;
+
+
 
 

@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { Container, Title, Calculator, Display, Result, Signal, Text, Keyboard, MainKeys, Line, Key, Number, OperationKeys, SignalKey } from './styles';
+import { Container, Title, Calculator, Display, Result, Signal, Text, Keyboard, MainKeys, Line, Key, Number, OperationKeys, SignalKey, ListKeys, ListTitle, Items, Icon } from './styles';
 
 function App() {
   const [valueDisplay, setValueDisplay] = useState('');
+  const [signal, setSignal] = useState('');
   const [countNumbers, setCountNumbers] = useState(0);
   const [total, setTotal] = useState(0);
+  const [prevSignal, setPrevSignal] = useState(0);
   const [fromOperation, setFromOperation] = useState(false);
-  const [signal, setSignal] = useState('');
   const [visibleTotal, setVisibleTotal] = useState(false);
   const [visibleSignal, setVisibleSignal] = useState(false);
-  const [prevSignal, setPrevSignal] = useState(0);
 
   function handlePress(e) {
     e.preventDefault();
@@ -225,6 +225,19 @@ function App() {
             </OperationKeys>
           </Keyboard>
         </Calculator>
+
+        <ListKeys>
+          <ListTitle>Keyboard Navigation</ListTitle>
+
+          <Items>Numbers: <Icon>0 - 9</Icon></Items>
+          <Items>Sum: <Icon>+</Icon></Items>
+          <Items>Subtraction: <Icon>-</Icon></Items>
+          <Items>Multiplication: <Icon>*</Icon> or <Icon>x</Icon> or <Icon>X</Icon></Items>
+          <Items>Division: <Icon>/</Icon></Items>
+          <Items>Equal: <Icon>=</Icon></Items>
+          <Items>Clear: <Icon>c</Icon> or <Icon>C</Icon></Items>
+          <Items>Clear All: <Icon>a</Icon> or <Icon>A</Icon></Items>
+        </ListKeys>
       </Container>
     </>
   );
