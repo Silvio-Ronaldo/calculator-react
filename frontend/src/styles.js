@@ -16,6 +16,8 @@ export const Title = styled.h1`
     font-family: 'Verdana';
     justify-self: center;
     font-weight: bold;
+    outline-color: red;
+    outline-width: 100px;
 `;
 
 export const Calculator = styled.div`
@@ -110,6 +112,8 @@ export const Key = styled.button`
     background: #DFF0D8;
     cursor: pointer;
     box-shadow: 3px 3px 3px black;
+    outline-color: red;
+    outline-width: 100px;
 `;
 
 export const Number = styled.text`
@@ -134,6 +138,8 @@ export const ListKeys = styled.ul`
     background: #468847;
     border-radius: 10px;
     box-shadow: 3px 3px 3px black;
+    outline-color: red;
+    outline-width: 100px;
 `;
 
 export const ListTitle = styled(Title)`
@@ -142,6 +148,8 @@ export const ListTitle = styled(Title)`
     color: #DFF0D8;
     font-size: 20px;
     font-weight: bold;
+    outline-color: red;
+    outline-width: 100px;
 `;
 
 export const Items = styled.li`
@@ -149,6 +157,8 @@ export const Items = styled.li`
     font-size: 20px;
     font-family: 'Verdana', sans-serif;
     color: #DFF0D8;
+    outline-color: red;
+    outline-width: 100px;
 `;
 
 export const Icon = styled.div`
@@ -158,6 +168,8 @@ export const Icon = styled.div`
     background: #DFF0D8;
     padding: 5px;
     color: #468847;
+    outline-color: red;
+    outline-width: 100px;
 `;
 
 
