@@ -12,7 +12,6 @@ function App() {
   const [visibleSignal, setVisibleSignal] = useState(false);
 
   function handlePress(e) {
-    e.preventDefault();
     let keyCode = e.key;
     switch(keyCode) {
       case "1":
@@ -229,7 +228,9 @@ function App() {
         <ListKeys>
           <ListTitle>Keyboard Navigation</ListTitle>
 
-          <Items>Numbers: <Icon>0 - 9</Icon></Items>
+          <Items>Page Elements Navigation: <Icon>Tab</Icon></Items>
+          <Items>Return Navigation: <Icon>Tab</Icon> + <Icon>Shift</Icon></Items>
+          <Items>Numbers: <Icon>0</Icon> - <Icon>9</Icon></Items>
           <Items>Sum: <Icon>+</Icon></Items>
           <Items>Subtraction: <Icon>-</Icon></Items>
           <Items>Multiplication: <Icon>*</Icon> or <Icon>x</Icon> or <Icon>X</Icon></Items>
