@@ -230,6 +230,7 @@ function App() {
 
           <Items>Page Elements Navigation: <Icon>Tab</Icon></Items>
           <Items>Return Navigation: <Icon>Tab</Icon> + <Icon>Shift</Icon></Items>
+          <Items>Select: <Icon>Enter</Icon></Items>
           <Items>Numbers: <Icon>0</Icon> - <Icon>9</Icon></Items>
           <Items>Sum: <Icon>+</Icon></Items>
           <Items>Subtraction: <Icon>-</Icon></Items>

@@ -5,22 +5,23 @@ export const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    background: green;
+    background: #DFF0D8;
 `;
 
 export const Title = styled.h1`
     grid-column-start: 2;
     grid-column-end: 3;
     font-size: 30px;
-    color: white;
+    color: #468847;
     font-family: 'Verdana';
     justify-self: center;
+    font-weight: bold;
 `;
 
 export const Calculator = styled.div`
     grid-column-start: 2;
     grid-column-end: 3;
-    background: #999;
+    background: #468847;
     height: 500px;
     margin-top: 5px; 
     margin-bottom: 5px;
@@ -33,11 +34,10 @@ export const Display = styled.div`
     display: grid;
     grid-template-rows: 1fr 2fr;
     grid-template-columns: 1fr;
-    background: orange;
+    background: white;
     height: 100px;
     border-radius: 10px;
     padding: 5px;
-    color: white;
 `;
 
 export const Result = styled.text`
@@ -50,6 +50,7 @@ export const Result = styled.text`
     padding: 0px;
     font-size: 30px;
     font-family: 'Verdana', sans-serif;
+    color: #468847;
 `;
 
 export const Signal = styled.text`
@@ -62,6 +63,7 @@ export const Signal = styled.text`
     font-size: 30px;
     font-weight: bold;
     visibility: none;
+    color: #468847;
 `;
 
 export const Text = styled.text`
@@ -72,14 +74,15 @@ export const Text = styled.text`
     justify-self: right;
     font-size: 60px;
     margin-right: 10px;
-    font-family: 'Verdana', sans-serif;  
+    font-family: 'Verdana', sans-serif; 
+    color: #468847; 
 `;
 
 export const Keyboard = styled.div`
     display: grid;
     grid-template-columns: 3fr 1fr;
     height: 370px;
-    background: pink;
+    background: #468847;
     padding: 10px;
     margin-top: 5px;
     border-radius: 10px;
@@ -88,7 +91,7 @@ export const Keyboard = styled.div`
 export const MainKeys = styled.section`
     display: grid;
     grid-template-columns: 1fr;
-    background: brown;
+    background: #468847;
     border-radius: 10px;
     padding: 10px;
 `;
@@ -104,12 +107,13 @@ export const Key = styled.button`
     border-radius: 10px;
     margin-left: 17px;
     margin-bottom: 5px;
-    background: #999;
+    background: #DFF0D8;
     cursor: pointer;
+    box-shadow: 3px 3px 3px black;
 `;
 
 export const Number = styled.text`
-    color: white;
+    color: #468847;
     font-weight: bold;
     font-size: 30px;
     font-family: 'Verdana';
@@ -118,7 +122,7 @@ export const Number = styled.text`
 export const OperationKeys = styled.aside``;
 
 export const SignalKey = styled(Key)`
-    background: teal;
+    background: #DFF0D8;
 `;
 
 export const ListKeys = styled.ul` 
@@ -127,31 +131,33 @@ export const ListKeys = styled.ul`
     grid-column-end: 4;
     width: 350px;
     justify-self: center;
-    background: white;
+    background: #468847;
     border-radius: 10px;
-    box-shadow: 3px 3px 3px grey;
+    box-shadow: 3px 3px 3px black;
 `;
 
 export const ListTitle = styled(Title)`
     grid-column-start: 1;
     grid-column-end: 2;
-    color: black;
+    color: #DFF0D8;
     font-size: 20px;
+    font-weight: bold;
 `;
 
 export const Items = styled.li`
     list-style: none;
     font-size: 20px;
     font-family: 'Verdana', sans-serif;
-    
+    color: #DFF0D8;
 `;
 
 export const Icon = styled.div`
     display: inline;
     border-radius: 5px;
-    box-shadow: 5px 5px 5px black;
-    background: gray;
+    box-shadow: 3px 3px 3px black;
+    background: #DFF0D8;
     padding: 5px;
+    color: #468847;
 `;
 
 
