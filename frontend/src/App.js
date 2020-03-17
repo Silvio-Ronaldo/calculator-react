@@ -183,7 +183,7 @@ function App() {
   return (
     <>
       <Container onKeyDown={(e) => handlePress(e)}>
-        <Title>CALCULATOR</Title>
+        <Title tabIndex='0'>CALCULATOR</Title>
 
         <Calculator>
           <Display>
@@ -225,20 +225,20 @@ function App() {
           </Keyboard>
         </Calculator>
 
-        <ListKeys>
-          <ListTitle>Keyboard Navigation</ListTitle>
+        <ListKeys tabIndex='0'>
+          <ListTitle tabIndex='0'>Keyboard Navigation</ListTitle>
 
-          <Items>Page Elements Navigation: <Icon>Tab</Icon></Items>
-          <Items>Return Navigation: <Icon>Tab</Icon> + <Icon>Shift</Icon></Items>
-          <Items>Select: <Icon>Enter</Icon></Items>
-          <Items>Numbers: <Icon>0</Icon> - <Icon>9</Icon></Items>
-          <Items>Sum: <Icon>+</Icon></Items>
-          <Items>Subtraction: <Icon>-</Icon></Items>
-          <Items>Multiplication: <Icon>*</Icon> or <Icon>x</Icon> or <Icon>X</Icon></Items>
-          <Items>Division: <Icon>/</Icon></Items>
-          <Items>Equal: <Icon>=</Icon></Items>
-          <Items>Clear: <Icon>c</Icon> or <Icon>C</Icon></Items>
-          <Items>Clear All: <Icon>a</Icon> or <Icon>A</Icon></Items>
+          <Items tabIndex='0'>Page Elements Navigation: <Icon tabIndex='0'>Tab</Icon></Items>
+          <Items tabIndex='0'>Return Navigation: <Icon tabIndex='0'>Tab</Icon> + <Icon tabIndex='0'>Shift</Icon></Items>
+          <Items tabIndex='0'>Select: <Icon tabIndex='0'>Enter</Icon></Items>
+          <Items tabIndex='0'>Numbers: <Icon tabIndex='0'>0</Icon> - <Icon tabIndex='0'>9</Icon></Items>
+          <Items tabIndex='0'>Sum: <Icon tabIndex='0'>+</Icon></Items>
+          <Items tabIndex='0'>Subtraction: <Icon tabIndex='0'>-</Icon></Items>
+          <Items tabIndex='0'>Multiplication: <Icon tabIndex='0'>*</Icon> or <Icon tabIndex='0'>x</Icon> or <Icon tabIndex='0'>X</Icon></Items>
+          <Items tabIndex='0'>Division: <Icon tabIndex='0'>/</Icon></Items>
+          <Items tabIndex='0'>Equal: <Icon tabIndex='0'>=</Icon></Items>
+          <Items tabIndex='0'>Clear: <Icon tabIndex='0'>c</Icon> or <Icon tabIndex='0'>C</Icon></Items>
+          <Items tabIndex='0'>Clear All: <Icon tabIndex='0'>a</Icon> or <Icon tabIndex='0'>A</Icon></Items>
         </ListKeys>
       </Container>
     </>
