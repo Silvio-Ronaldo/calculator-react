@@ -6,6 +6,7 @@ export const Container = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     background: #DFF0D8;
+    outline: 0px solid transparent;
 `;
 
 export const Title = styled.h1`

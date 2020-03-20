@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Container, Title, Calculator, Display, Result, Signal, Text, Keyboard, MainKeys, Line, Key, Number, OperationKeys, SignalKey, ListKeys, ListTitle, Items, Icon } from './styles';
 
 function App() {
@@ -10,6 +10,12 @@ function App() {
   const [fromOperation, setFromOperation] = useState(false);
   const [visibleTotal, setVisibleTotal] = useState(false);
   const [visibleSignal, setVisibleSignal] = useState(false);
+
+  const container = useRef(null);
+
+  useEffect(() => {
+    container.current.focus();
+  }, [])
 
   function handlePress(e) {
     let keyCode = e.key;
@@ -182,7 +188,7 @@ function App() {
 
   return (
     <>
-      <Container onKeyDown={(e) => handlePress(e)}>
+      <Container onKeyDown={(e) => handlePress(e)} ref={container} tabIndex="0">
         <Title tabIndex='0'>CALCULATOR</Title>
 
         <Calculator>
