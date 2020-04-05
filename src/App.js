@@ -237,7 +237,7 @@ function App() {
           <Items tabIndex='0'>Page Elements Navigation: <Icon tabIndex='0'>Tab</Icon></Items>
           <Items tabIndex='0'>Return Navigation: <Icon tabIndex='0'>Tab</Icon> + <Icon tabIndex='0'>Shift</Icon></Items>
           <Items tabIndex='0'>Select: <Icon tabIndex='0'>Enter</Icon></Items>
-          <Items tabIndex='0'>Numbers: <Icon tabIndex='0'>0</Icon> - <Icon tabIndex='0'>9</Icon></Items>
+          <Items tabIndex='0'>Numbers [0..9]: <Icon tabIndex='0'>0</Icon> .. <Icon tabIndex='0'>9</Icon></Items>
           <Items tabIndex='0'>Sum: <Icon tabIndex='0'>+</Icon></Items>
           <Items tabIndex='0'>Subtraction: <Icon tabIndex='0'>-</Icon></Items>
           <Items tabIndex='0'>Multiplication: <Icon tabIndex='0'>*</Icon> or <Icon tabIndex='0'>x</Icon> or <Icon tabIndex='0'>X</Icon></Items>
