@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Container, Title, Calculator, Display, Result, Signal, Text, Keyboard, MainKeys, Line, Key, Number, OperationKeys, SignalKey, ListKeys, ListTitle, Items, Icon } from './styles';
+import { Container, Title, Calculator, Display, Result, Signal, Text, Keyboard, 
+        MainKeys, Line, Key, Number, OperationKeys, SignalKey, ListKeys, ListTitle, Items, Icon } from './styles';
 
 function App() {
   const [valueDisplay, setValueDisplay] = useState('');
@@ -120,6 +121,9 @@ function App() {
         case 4:
           setTotal(total / (parseInt(valueDisplay)));
           break;
+        case 5:
+          setTotal(valueDisplay);
+          break;
       }
 
       if(operation === 1) {
@@ -135,7 +139,7 @@ function App() {
       setValueDisplay('');
       
     } else if(valueDisplay !== '') {
-      
+
       if(operation === 1) {
         setSignal('+');
       } else if(operation === 2) {
@@ -145,7 +149,6 @@ function App() {
       } else {
         setSignal('/');
       }
-
       setTotal((parseInt(valueDisplay)));
       setFromOperation(true);
     }
@@ -170,6 +173,7 @@ function App() {
     })
     setVisibleSignal(false);
     setVisibleTotal(false);
+    setPrevSignal(5);
   }
 
   function handleClearAll() {
