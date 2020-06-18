@@ -124,6 +124,8 @@ function App() {
         case 5:
           setTotal(valueDisplay);
           break;
+        default:
+          break;
       }
 
       if(operation === 1) {
@@ -160,15 +162,26 @@ function App() {
 
   function handleResult() {
     setValueDisplay(() => {
+      const intValue = parseInt(valueDisplay);
       switch(prevSignal) {
         case 1: 
-          return (total + parseInt(valueDisplay));
+          const sum = parseFloat(total) + intValue;
+          const sumStr = String(sum).split("");
+          return (sumStr.length <= 8) ? sum : (sumStr.slice(0, 10).join(""));       
         case 2: 
-          return (total - parseInt(valueDisplay));
+          const sub = parseFloat(total) - intValue;
+          const subStr = String(sub).split("");
+          return (subStr.length <= 8) ? sub : (subStr.slice(0, 10).join(""));
         case 3:
-          return (total * parseInt(valueDisplay));
+          const mult = parseFloat(total) * intValue;
+          const multStr = String(mult).split("");
+          return (multStr.length <= 8) ? mult : (multStr.slice(0, 10).join(""));
         case 4:
-          return (total / parseInt(valueDisplay));
+          const div = parseFloat(total) / intValue;
+          const divStr = String(div).split("");
+          return (divStr.length <= 8) ? div : (divStr.slice(0, 10).join(""));
+        default:
+          break;
       }
     })
     setVisibleSignal(false);
