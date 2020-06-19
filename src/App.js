@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Container, Title, Calculator, Display, Result, Signal, Text, Keyboard, 
+import { Container, Header, Title, Calculator, Display, Register, Result, Signal, Text, Keyboard, 
         MainKeys, Line, Key, Number, OperationKeys, SignalKey, ListKeys, ListTitle, Items, Icon } from './styles';
+
+import './global.css';
 
 function App() {
   const [valueDisplay, setValueDisplay] = useState('');
@@ -206,14 +208,19 @@ function App() {
   return (
     <>
       <Container onKeyDown={(e) => handlePress(e)} ref={container} tabIndex="0">
-        <Title tabIndex='0'>CALCULATOR</Title>
+        <Header>
+          <Title tabIndex='0'>CALCULATOR</Title>
+        </Header>
 
         <Calculator>
           <Display>
-            <Result visible={visibleTotal}>{total}</Result>
-            <Signal visible={visibleSignal}>{signal}</Signal>
+            <Register>
+              <Result visible={visibleTotal}>{total}</Result>
+              <Signal visible={visibleSignal}>{signal}</Signal>
+            </Register>
             <Text>{valueDisplay}</Text>
           </Display>
+
           <Keyboard>
             <MainKeys>
               <Line>

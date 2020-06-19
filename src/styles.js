@@ -2,30 +2,35 @@ import React from 'react';
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: #DFF0D8;
     outline: 0px solid transparent;
 `;
 
+export const Header = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: darkgreen;
+`;
+
 export const Title = styled.h1`
-    grid-column-start: 2;
-    grid-column-end: 3;
     font-size: 30px;
-    color: #468847;
+    color: #FFF;
     font-family: 'Verdana';
-    justify-self: center;
     font-weight: bold;
     outline-color: red;
     outline-width: 5px;
 `;
 
 export const Calculator = styled.div`
-    grid-column-start: 2;
-    grid-column-end: 3;
     background: #468847;
-    height: 500px;
+    height: 520px;
+    width: 420px;
     margin-top: 5px; 
     margin-bottom: 5px;
     border-radius: 10px;
@@ -34,20 +39,19 @@ export const Calculator = styled.div`
 `;
 
 export const Display = styled.div`
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     background: white;
-    height: 100px;
+    height: 120px;
     border-radius: 10px;
     padding: 5px;
 `;
 
+export const Register = styled.div``;
+
 export const Result = styled.text`
     visibility: ${props => props.visible ? "none" : "hidden" };
-    grid-row-start: 1;
-    grid-row-end: 2;
-    justify-self: right;
     margin-top: 5px;
     margin-right: 10px;
     padding: 0px;
@@ -58,23 +62,14 @@ export const Result = styled.text`
 
 export const Signal = styled.text`
     visibility: ${props => props.visible ? "none" : "hidden"};
-    grid-row-start: 1;
-    grid-row-end: 2;
-    justify-self: right;
     margin-top: 5px;
     margin-right: 10px;
     font-size: 30px;
     font-weight: bold;
-    visibility: none;
     color: #468847;
 `;
 
 export const Text = styled.text`
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    justify-self: right;
     font-size: 60px;
     margin-right: 10px;
     font-family: 'Verdana', sans-serif; 
@@ -82,25 +77,18 @@ export const Text = styled.text`
 `;
 
 export const Keyboard = styled.div`
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+    display: flex;
     height: 370px;
     background: #468847;
-    padding: 10px;
     margin-top: 5px;
     border-radius: 10px;
+    justify-content: center;
+    align-items: center;
 `;
 
-export const MainKeys = styled.section`
-    display: grid;
-    grid-template-columns: 1fr;
-    background: #468847;
-    border-radius: 10px;
-    padding: 10px;
-`;
+export const MainKeys = styled.section``;
 
 export const Line = styled.div`
-    justify-self: center;
     padding: 5px;
 `;
 
@@ -108,7 +96,7 @@ export const Key = styled.button`
     width: 70px;
     height: 70px;
     border-radius: 10px;
-    margin-left: 17px;
+    margin-right: 17px;
     margin-bottom: 5px;
     background: #DFF0D8;
     cursor: pointer;
@@ -124,18 +112,26 @@ export const Number = styled.text`
     font-family: 'Verdana';
 `;
 
-export const OperationKeys = styled.aside``;
+export const OperationKeys = styled(MainKeys)`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 15px;
+    margin-left: 30px;
+`;
 
 export const SignalKey = styled(Key)`
     background: #DFF0D8;
+    margin-right: 0;
 `;
 
 export const ListKeys = styled.ul` 
-    display: grid;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    width: 350px;
-    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 400px;
+    align-items: center;
     background: #468847;
     border-radius: 10px;
     box-shadow: 3px 3px 3px black;
@@ -143,9 +139,7 @@ export const ListKeys = styled.ul`
     outline-width: 5px;
 `;
 
-export const ListTitle = styled(Title)`
-    grid-column-start: 1;
-    grid-column-end: 2;
+export const ListTitle = styled(Header)`
     color: #DFF0D8;
     font-size: 20px;
     font-weight: bold;
