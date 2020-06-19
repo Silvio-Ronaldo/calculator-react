@@ -4,7 +4,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     background: #DFF0D8;
     outline: 0px solid transparent;
 `;
@@ -28,8 +27,14 @@ export const Title = styled.h1`
 `;
 
 export const Main = styled(Container)`
+    justify-content: flex-end;
     margin-top: 5px;
     flex-direction: row;
+
+    @media(max-width: 880px) {
+        flex-direction: column;
+        justify-content: center;
+    }
 `;
 
 export const Calculator = styled.div`
@@ -147,6 +152,12 @@ export const ListKeys = styled.ul`
     box-shadow: 3px 3px 3px black;
     outline-color: red;
     outline-width: 5px;
+
+    @media(max-width: 880px) {
+        justify-self: center;
+        align-self: center;
+        margin-top: 10px;
+    }
 `;
 
 export const ListTitle = styled(Title)`
