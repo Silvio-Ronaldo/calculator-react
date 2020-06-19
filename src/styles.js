@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     background: #DFF0D8;
     outline: 0px solid transparent;
 `;
@@ -27,12 +27,18 @@ export const Title = styled.h1`
     outline-width: 5px;
 `;
 
+export const Main = styled(Container)`
+    margin-top: 5px;
+    flex-direction: row;
+`;
+
 export const Calculator = styled.div`
     background: #468847;
+    align-self: center;
     height: 520px;
-    width: 420px;
-    margin-top: 5px; 
+    width: 420px; 
     margin-bottom: 5px;
+    margin-right: 20px;
     border-radius: 10px;
     box-shadow: 3px 3px 3px black;
     padding: 10px;
@@ -129,9 +135,13 @@ export const SignalKey = styled(Key)`
 export const ListKeys = styled.ul` 
     display: flex;
     flex-direction: column;
-    height: 500px;
-    width: 400px;
+    justify-content: center;
     align-items: center;
+    height: 550px;
+    width: 400px;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-right: 20px;
     background: #468847;
     border-radius: 10px;
     box-shadow: 3px 3px 3px black;
@@ -139,7 +149,8 @@ export const ListKeys = styled.ul`
     outline-width: 5px;
 `;
 
-export const ListTitle = styled(Header)`
+export const ListTitle = styled(Title)`
+    align-self: center;
     color: #DFF0D8;
     font-size: 20px;
     font-weight: bold;
@@ -152,6 +163,7 @@ export const Items = styled.li`
     font-size: 20px;
     font-family: 'Verdana', sans-serif;
     color: #DFF0D8;
+    margin-top: 20px;
     outline-color: red;
     outline-width: 5px;
 `;
@@ -166,7 +178,3 @@ export const Icon = styled.div`
     outline-color: red;
     outline-width: 5px;
 `;
-
-
-
-

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Container, Header, Title, Calculator, Display, Register, Result, Signal, Text, Keyboard, 
+import { Container, Header, Title, Main, Calculator, Display, Register, Result, Signal, Text, Keyboard, 
         MainKeys, Line, Key, Number, OperationKeys, SignalKey, ListKeys, ListTitle, Items, Icon } from './styles';
 
 import './global.css';
@@ -212,64 +212,66 @@ function App() {
           <Title tabIndex='0'>CALCULATOR</Title>
         </Header>
 
-        <Calculator>
-          <Display>
-            <Register>
-              <Result visible={visibleTotal}>{total}</Result>
-              <Signal visible={visibleSignal}>{signal}</Signal>
-            </Register>
-            <Text>{valueDisplay}</Text>
-          </Display>
+        <Main>
+          <Calculator>
+            <Display>
+              <Register>
+                <Result visible={visibleTotal}>{total}</Result>
+                <Signal visible={visibleSignal}>{signal}</Signal>
+              </Register>
+              <Text>{valueDisplay}</Text>
+            </Display>
 
-          <Keyboard>
-            <MainKeys>
-              <Line>
-                <Key onClick={ () => handleNumbers('7') }><Number>7</Number></Key>
-                <Key onClick={ () => handleNumbers('8') }><Number>8</Number></Key>
-                <Key onClick={ () => handleNumbers('9') }><Number>9</Number></Key>
-              </Line>
-              <Line>
-                <Key onClick={ () => handleNumbers('4') }><Number>4</Number></Key>
-                <Key onClick={ () => handleNumbers('5') }><Number>5</Number></Key>
-                <Key onClick={ () => handleNumbers('6') }><Number>6</Number></Key>
-              </Line>
-              <Line>
-                <Key onClick={() => handleNumbers('1') }><Number>1</Number></Key>
-                <Key onClick={() => handleNumbers('2') }><Number>2</Number></Key>
-                <Key onClick={() => handleNumbers('3') }><Number>3</Number></Key>
-              </Line>
-              <Line>
-                <Key onClick={() => handleNumbers('0') }><Number>0</Number></Key>
-                <Key onClick={() => handleClear()}><Number>C</Number></Key>
-                <Key onClick={() => handleClearAll()}><Number>CA</Number></Key>
-              </Line>  
-            </MainKeys>
+            <Keyboard>
+              <MainKeys>
+                <Line>
+                  <Key onClick={ () => handleNumbers('7') }><Number>7</Number></Key>
+                  <Key onClick={ () => handleNumbers('8') }><Number>8</Number></Key>
+                  <Key onClick={ () => handleNumbers('9') }><Number>9</Number></Key>
+                </Line>
+                <Line>
+                  <Key onClick={ () => handleNumbers('4') }><Number>4</Number></Key>
+                  <Key onClick={ () => handleNumbers('5') }><Number>5</Number></Key>
+                  <Key onClick={ () => handleNumbers('6') }><Number>6</Number></Key>
+                </Line>
+                <Line>
+                  <Key onClick={() => handleNumbers('1') }><Number>1</Number></Key>
+                  <Key onClick={() => handleNumbers('2') }><Number>2</Number></Key>
+                  <Key onClick={() => handleNumbers('3') }><Number>3</Number></Key>
+                </Line>
+                <Line>
+                  <Key onClick={() => handleNumbers('0') }><Number>0</Number></Key>
+                  <Key onClick={() => handleClear()}><Number>C</Number></Key>
+                  <Key onClick={() => handleClearAll()}><Number>CA</Number></Key>
+                </Line>  
+              </MainKeys>
 
-            <OperationKeys>
-                <SignalKey onClick={ () => handleOperations(4) }><Number>/</Number></SignalKey>
-                <SignalKey onClick={ () => handleOperations(3) }><Number>*</Number></SignalKey>
-                <SignalKey onClick={ () => handleOperations(2) }><Number>-</Number></SignalKey>
-                <SignalKey onClick={ () => handleOperations(1) }><Number>+</Number></SignalKey>
-                <SignalKey onClick={ () => handleResult() }><Number>=</Number></SignalKey>
-            </OperationKeys>
-          </Keyboard>
-        </Calculator>
+              <OperationKeys>
+                  <SignalKey onClick={ () => handleOperations(4) }><Number>/</Number></SignalKey>
+                  <SignalKey onClick={ () => handleOperations(3) }><Number>*</Number></SignalKey>
+                  <SignalKey onClick={ () => handleOperations(2) }><Number>-</Number></SignalKey>
+                  <SignalKey onClick={ () => handleOperations(1) }><Number>+</Number></SignalKey>
+                  <SignalKey onClick={ () => handleResult() }><Number>=</Number></SignalKey>
+              </OperationKeys>
+            </Keyboard>
+          </Calculator>
 
-        <ListKeys tabIndex='0'>
-          <ListTitle tabIndex='0'>Keyboard Navigation</ListTitle>
+          <ListKeys tabIndex='0'>
+            <ListTitle tabIndex='0'>Keyboard Navigation</ListTitle>
 
-          <Items tabIndex='0'>Page Elements Navigation: <Icon tabIndex='0'>Tab</Icon></Items>
-          <Items tabIndex='0'>Return Navigation: <Icon tabIndex='0'>Tab</Icon> + <Icon tabIndex='0'>Shift</Icon></Items>
-          <Items tabIndex='0'>Select: <Icon tabIndex='0'>Enter</Icon></Items>
-          <Items tabIndex='0'>Numbers [0..9]: <Icon tabIndex='0'>0</Icon> .. <Icon tabIndex='0'>9</Icon></Items>
-          <Items tabIndex='0'>Sum: <Icon tabIndex='0'>+</Icon></Items>
-          <Items tabIndex='0'>Subtraction: <Icon tabIndex='0'>-</Icon></Items>
-          <Items tabIndex='0'>Multiplication: <Icon tabIndex='0'>*</Icon> or <Icon tabIndex='0'>x</Icon> or <Icon tabIndex='0'>X</Icon></Items>
-          <Items tabIndex='0'>Division: <Icon tabIndex='0'>/</Icon></Items>
-          <Items tabIndex='0'>Equal: <Icon tabIndex='0'>=</Icon></Items>
-          <Items tabIndex='0'>Clear: <Icon tabIndex='0'>c</Icon> or <Icon tabIndex='0'>C</Icon></Items>
-          <Items tabIndex='0'>Clear All: <Icon tabIndex='0'>a</Icon> or <Icon tabIndex='0'>A</Icon></Items>
-        </ListKeys>
+            <Items tabIndex='0'>Page Elements Navigation: <Icon tabIndex='0'>Tab</Icon></Items>
+            <Items tabIndex='0'>Return Navigation: <Icon tabIndex='0'>Tab</Icon> + <Icon tabIndex='0'>Shift</Icon></Items>
+            <Items tabIndex='0'>Select: <Icon tabIndex='0'>Enter</Icon></Items>
+            <Items tabIndex='0'>Numbers [0..9]: <Icon tabIndex='0'>0</Icon> .. <Icon tabIndex='0'>9</Icon></Items>
+            <Items tabIndex='0'>Sum: <Icon tabIndex='0'>+</Icon></Items>
+            <Items tabIndex='0'>Subtraction: <Icon tabIndex='0'>-</Icon></Items>
+            <Items tabIndex='0'>Multiplication: <Icon tabIndex='0'>*</Icon> or <Icon tabIndex='0'>x</Icon> or <Icon tabIndex='0'>X</Icon></Items>
+            <Items tabIndex='0'>Division: <Icon tabIndex='0'>/</Icon></Items>
+            <Items tabIndex='0'>Equal: <Icon tabIndex='0'>=</Icon></Items>
+            <Items tabIndex='0'>Clear: <Icon tabIndex='0'>c</Icon> or <Icon tabIndex='0'>C</Icon></Items>
+            <Items tabIndex='0'>Clear All: <Icon tabIndex='0'>a</Icon> or <Icon tabIndex='0'>A</Icon></Items>
+          </ListKeys>
+        </Main>
       </Container>
     </>
   );
