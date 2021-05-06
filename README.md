@@ -30,12 +30,12 @@
   📋 Table of contents
 </h2>
 <ul>
-  <li><a href="https://github.com/Silvio-Ronaldo/podcastr#-status">Status</a></li>
-  <li><a href="https://github.com/Silvio-Ronaldo/podcastr#%EF%B8%8F-demonstration">Demonstration</a></li>
-  <li><a href="https://github.com/Silvio-Ronaldo/podcastr#%EF%B8%8F-running-locally">Running Locally</a></li>
-  <li><a href="https://github.com/Silvio-Ronaldo/podcastr#%EF%B8%8F-technologies">Technologies</a></li>
-  <li><a href="https://github.com/Silvio-Ronaldo/podcastr#%EF%B8%8F-technologies">Author</a></li>
-  <li><a href="https://github.com/Silvio-Ronaldo/podcastr#%EF%B8%8F-license">License</a></li>
+  <li><a href="https://github.com/Silvio-Ronaldo/calculator-react#-status">Status</a></li>
+  <li><a href="https://github.com/Silvio-Ronaldo/calculator-react#%EF%B8%8F-demonstration">Demonstration</a></li>
+  <li><a href="https://github.com/Silvio-Ronaldo/calculator-react#%EF%B8%8F-running-locally">Running Locally</a></li>
+  <li><a href="https://github.com/Silvio-Ronaldo/calculator-react#%EF%B8%8F-technologies">Technologies</a></li>
+  <li><a href="https://github.com/Silvio-Ronaldo/calculator-react#-author">Author</a></li>
+  <li><a href="https://github.com/Silvio-Ronaldo/calculator-react#%EF%B8%8F-license">License</a></li>
 </ul>
 
 
