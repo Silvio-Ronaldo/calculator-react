@@ -32,6 +32,7 @@
 <ul>
   <li><a href="https://github.com/Silvio-Ronaldo/calculator-react#-status">Status</a></li>
   <li><a href="https://github.com/Silvio-Ronaldo/calculator-react#%EF%B8%8F-demonstration">Demonstration</a></li>
+  <li><a href="https://github.com/Silvio-Ronaldo/podcastr#-extra-features">Extra Features</a></li>
   <li><a href="https://github.com/Silvio-Ronaldo/calculator-react#%EF%B8%8F-running-locally">Running Locally</a></li>
   <li><a href="https://github.com/Silvio-Ronaldo/calculator-react#%EF%B8%8F-technologies">Technologies</a></li>
   <li><a href="https://github.com/Silvio-Ronaldo/calculator-react#-author">Author</a></li>
@@ -48,21 +49,21 @@
   <strong>To access and test the CalculatoReact website, click on the link: https://silvio-ronaldo.github.io/calculator-react/</strong>
 </p>
 
-<h3>Home</h3>
+<h3>Calculating</h3>
   <p align="center">
-    <img src="./assets/home.gif" alt="CalculatoReact Home" />
+    <img src="./assets/calculating.gif" alt="CalculatoReact Home" />
   </p>
   
   
 <h2>🔥 Extra Features</h2>
 <h3>Use by Keyboard</h3>
   <p align="center">
-    <img src="./assets/dark-theme.gif" alt="CalculatoReact keyboard navigation" />
+    <img src="./assets/keyboard.gif" alt="CalculatoReact keyboard navigation" />
   </p>
   
 <h3>Accessibility for screen readers</h3>
   <p align="center">
-    <img src="./assets/dark-theme.gif" alt="CalculatoReact acessibility for screen readers" />
+    <img src="./assets/acessibility.gif" alt="CalculatoReact acessibility for screen readers" />
   </p>
   
   
