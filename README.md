@@ -32,7 +32,7 @@
 <ul>
   <li><a href="https://github.com/Silvio-Ronaldo/calculator-react#-status">Status</a></li>
   <li><a href="https://github.com/Silvio-Ronaldo/calculator-react#%EF%B8%8F-demonstration">Demonstration</a></li>
-  <li><a href="https://github.com/Silvio-Ronaldo/podcastr#-extra-features">Extra Features</a></li>
+  <li><a href="https://github.com/Silvio-Ronaldo/calculator-react#-extra-features">Extra Features</a></li>
   <li><a href="https://github.com/Silvio-Ronaldo/calculator-react#%EF%B8%8F-running-locally">Running Locally</a></li>
   <li><a href="https://github.com/Silvio-Ronaldo/calculator-react#%EF%B8%8F-technologies">Technologies</a></li>
   <li><a href="https://github.com/Silvio-Ronaldo/calculator-react#-author">Author</a></li>
