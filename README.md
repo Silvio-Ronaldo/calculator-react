@@ -53,9 +53,16 @@
     <img src="./assets/home.gif" alt="CalculatoReact Home" />
   </p>
   
-<h3>Calculating</h3>
+  
+<h2>🔥 Extra Features</h2>
+<h3>Use by Keyboard</h3>
   <p align="center">
-    <img src="./assets/home.gif" alt="Calculating in CalculatoReact" />
+    <img src="./assets/dark-theme.gif" alt="CalculatoReact keyboard navigation" />
+  </p>
+  
+<h3>Accessibility for screen readers</h3>
+  <p align="center">
+    <img src="./assets/dark-theme.gif" alt="CalculatoReact acessibility for screen readers" />
   </p>
   
   
